@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="asset/water-drops.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap">
+<title>Riego Automático</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="barra">
+<div class="wrap bar">
+<a class="marca" href="#inicio">
+<img src="asset/water-drops.png" alt="Logo" height="30">
+<span>Riego Automático</span>
+</a>
+<button id="menu" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav><ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#como">Cómo funciona</a></li>
+<li><a href="#beneficios">Beneficios</a></li>
+<li><a href="#noticias">Noticias</a></li>
+<li><a href="#partes">Partes del sistema</a></li>
+</ul></nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+<div class="wrap">
+<div class="entra">
+<h1>Riega solo cuando la tierra lo necesita</h1>
+<p class="lead">Un sistema con Arduino que mide la humedad del suelo y decide cuándo regar. Proyecto académico de ingeniería.</p>
+</div>
+<div class="tarjeta entra">
+<img data-ph="Imagen del proyecto" src="asset/fondo_inicio/hero_tarjeta.jpg" alt="Planta joven frente a un circuito de luz, que representa la tecnología del sistema" >
+<a class="btn" href="#como">Conoce cómo funciona
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+</div>
+</div>
+</section>
+
+<section class="intro">
+<div class="wrap">
+<div class="cab">
+<h2>Convertimos un huerto en un espacio que se cuida solo</h2>
+<p>El agua es limitada y el campo la necesita. Por eso este prototipo riega únicamente cuando el suelo está seco y se detiene cuando ya hay suficiente humedad.</p>
+</div>
+<div class="cuerpo">
+<figure><img data-ph="Imagen de un huerto con riego" src="asset/fondo_inicio/riego_1.jpeg" alt="Huerto con sensores, aspersores y paneles solares al atardecer" loading="lazy"></figure>
+<div class="cifras">
+<div class="cifra"><b>71 %</b><span>del agua dulce que se extrae en el mundo se usa en la agricultura (AQUASTAT, 2022)</span></div>
+<div class="cifra"><b>3</b><span>pasos que se repiten solos: medir, decidir y regar</span></div>
+<div class="cifra"><b>5</b><span>elementos forman el sistema, del usuario al orgware</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="como">
+<div class="wrap">
+<div class="centro">
+<h2>Cómo funciona</h2>
+<p class="sub">Tres pasos que se repiten solos, sin que nadie tenga que estar regando.</p>
+</div>
+<div class="pasos">
+<!-- Las fotos de cada paso se pueden cambiar por otras: cambia solo el src de cada img (pueden ser tus propias fotos). -->
+<article class="paso">
+<div class="foto"><img data-ph="Foto del sensor de humedad en la tierra" src="asset/funcion/sensor_humedad.jpeg" alt="Sensor de humedad clavado en la tierra de un huerto" loading="lazy"></div>
+<span class="num">1</span>
+<h3>El sensor mide</h3>
+<p>Una sonda se clava en la tierra y mide qué tan húmeda está en ese momento.</p>
+</article>
+<article class="paso">
+<div class="foto"><img data-ph="Foto del controlador Arduino" src="asset/funcion/controlador_arduino.jpg" alt="Placa controladora conectada a una válvula de riego y a un sensor en el huerto" loading="lazy"></div>
+<span class="num">2</span>
+<h3>El sistema decide</h3>
+<p>Un Arduino compara la lectura con un nivel establecido. Si el suelo está seco, espera unos segundos para confirmar que no fue una lectura falsa y entonces ordena regar.</p>
+</article>
+<article class="paso">
+<div class="foto"><img data-ph="Foto del riego en funcionamiento" src="asset/fondo_inicio/riego_2.jpeg" alt="Manguera de goteo regando una planta joven" loading="lazy"></div>
+<span class="num">3</span>
+<h3>La bomba riega o se detiene</h3>
+<p>Un relé enciende la bomba mientras el suelo está seco y la apaga cuando la humedad es suficiente, para no desperdiciar agua. Una pantalla muestra siempre el estado.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="beneficios" class="verde">
+<div class="wrap">
+<h2>Beneficios</h2>
+<p class="sub">Según datos de AQUASTAT, de la FAO, en 2022 el sector agrícola representó el 71 % de las extracciones mundiales de agua dulce (<a href="https://www.iagua.es/noticias/redaccion-iagua/agua-dulce-presion-global-lo-que-muestra-aquastat-2025-agricultura-y" target="_blank" rel="noopener">iAgua, 2025</a>). Regar solo cuando hace falta importa.</p>
+<article class="par">
+<figure><img data-ph="Foto del prototipo físico" src="asset/beneficios/prototipo_fisico.png" alt="Prototipo físico del sistema de riego armado en protoboard" loading="lazy"></figure>
+<div><h3>Un sistema pequeño para un huerto escolar</h3>
+<ul class="l"><li>Riega solo cuando el suelo lo necesita, para cuidar el agua.</li><li>Funciona sin que una persona tenga que estar presente.</li><li>Muestra su estado en una pantalla fácil de entender.</li><li>Circuito sencillo, con componentes accesibles y de bajo costo.</li></ul></div>
+</article>
+<article class="par inv">
+<figure><img data-ph="Imagen de un invernadero" src="asset/beneficios/invernadero_macetas.jpg" alt="Invernadero con macetas de distintas plantas, cada una con su gotero" style="object-position:50% 62%" loading="lazy"></figure>
+<div><h3>Una evolución posible: varias zonas e invernaderos</h3>
+<ul class="l"><li>Varios sensores y zonas de riego independientes.</li><li>Cada zona calibrada según el tipo de planta o cultivo.</li><li>Del riego uniforme a uno calculado según el agua realmente necesaria.</li></ul>
+<p class="cred">Es una idea de crecimiento del proyecto; el prototipo actual es académico.</p></div>
+</article>
+</div>
+</section>
+
+<section id="noticias">
+<div class="wrap">
+<h2>Noticias</h2>
+<p class="sub">El agua y el campo, en la conversación actual.</p>
+<div class="cards">
+<article class="card"><img data-ph="Foto de la noticia" src="asset/noticias/noticia_1.avif" alt="" loading="lazy"><div class="t"><h3>Agua dulce bajo presión global: lo que muestra AQUASTAT 2025</h3><span class="fuente">iAgua · Noticia</span><a href="https://www.iagua.es/noticias/redaccion-iagua/agua-dulce-presion-global-lo-que-muestra-aquastat-2025-agricultura-y" target="_blank" rel="noopener">Leer noticia</a></div></article>
+<article class="card"><img data-ph="Foto de la noticia" src="asset/noticias/noticia_2.webp" alt="" loading="lazy"><div class="t"><h3>Gobierno tecnificará riego agrícola para ahorrar agua y llevarla a poblados con escasez</h3><span class="fuente">Expansión Política · Noticia, 27 de marzo de 2025. México destina el 76 % de su agua a la agricultura.</span><a href="https://politica.expansion.mx/presidencia/2025/03/27/gobierno-tecnificara-riego-para-ahorrar-agua-y-llevarla-a-poblados-con-escasez" target="_blank" rel="noopener">Leer noticia</a></div></article>
+<article class="card"><img data-ph="Imagen del estudio" src="asset/noticias/noticia_3.jpg" alt="" loading="lazy"><div class="t"><h3>Seguridad hídrica con enfoque de cuenca: caso Veracruz, México</h3><span class="fuente">Ingeniería del Agua · Artículo. Casi la mitad de las entidades de México tiene estrés hídrico extremadamente alto.</span><a href="https://doi.org/10.4995/ia.2021.15221" target="_blank" rel="noopener">Leer artículo</a></div></article>
+</div>
+</div>
+</section>
+
+<section id="partes" class="gris">
+<div class="wrap">
+<h2>Partes del sistema</h2>
+<p class="sub">Así se ve un sistema de riego y los elementos que lo forman.</p>
+<div class="partes">
+<figure class="mapa">
+<div class="lienzo">
+<img data-ph="Imagen del sistema de riego con sus partes etiquetadas" src="asset/partes/sistema_riego_real.jpg" alt="Agricultor revisando en una tableta los datos de un sensor de humedad junto a una línea de riego por goteo" loading="lazy">
+<span class="pin izq" style="left:88%;top:17.5%"><i>Usuario</i></span>
+<span class="pin der" style="left:40%;top:16%"><i>Software</i></span>
+<span class="pin der" style="left:17%;top:70.5%"><i>Firmware</i></span>
+<span class="pin der" style="left:14%;top:82.5%"><i>Hardware</i></span>
+</div>
+<p class="cred">Imagen: [escribe aquí el crédito o la fuente].</p>
+</figure>
+<div class="elem">
+<div><b>Usuario</b><span>Quien cuida el huerto y consulta el estado.</span></div>
+<div><b>Software</b><span>El programa que lee, decide y avisa.</span></div>
+<div><b>Firmware</b><span>Las instrucciones base de la placa.</span></div>
+<div><b>Hardware</b><span>Arduino, sensor de humedad, bomba o servo, relé y pantalla.</span></div>
+<div><b>Orgware</b><span>El diseño, las pruebas y la documentación. No se ve en la foto: es el trabajo detrás del sistema.</span></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p><b>Proyecto académico, no es un producto comercial.</b> Elaborado por el equipo de Introducción a la Ingeniería, Grupo Tecnológico Universitario.</p>
+<p>Créditos: el diseño del circuito y el código base parten del video de <a href="https://www.youtube.com/watch?v=bJIriNF0zcA" target="_blank" rel="noopener">EAZYTRONIC (2024)</a>, con modificaciones propias. Imágenes: [fuente y licencia].</p>
+<p class="copy">© 2026 Riego Automático. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
